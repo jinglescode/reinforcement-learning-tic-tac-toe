@@ -1,0 +1,25 @@
+{
+  "name": "reinforcement-learning-tic-tac-toe",
+  "version": "1.0.0",
+  "description": "A reinforcement learning algorithm for agents to learn the tic-tac-toe, using the value function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "push": "git push https://github.com/jinglescode/reinforcement-learning-tic-tac-toe.git master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinglescode/reinforcement-learning-tic-tac-toe.git"
+  },
+  "keywords": [
+    "machine-learning",
+    "tensorflowjs",
+    "javascript"
+  ],
+  "author": "Khok Hong Jing (Jingles)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinglescode/reinforcement-learning-tic-tac-toe/issues"
+  },
+  "homepage": "https://jinglescode.github.io/reinforcement-learning-tic-tac-toe"
+}
