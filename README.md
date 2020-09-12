@@ -1,7 +1,7 @@
 # Reinforcement Learning Tic Tac Toe with Value Function
 > A reinforcement learning algorithm for agents to learn the tic-tac-toe, using the value function
 
-![cover](https://jinglescode.github.io/assets/img/posts/rl-value-func-00.webp)
+![cover](https://jinglescode.github.io/assets/img/posts/rl-value-func-00.jpg)
 
 [Explore Demo](https://jinglescode.github.io/reinforcement-learning-tic-tac-toe)
 
@@ -21,21 +21,21 @@ In order to acquire the reward, the value function is an efficient way to determ
 
 # Define the Value Function
 
-![Fig 1: State A leads to state B or C](https://jinglescode.github.io/assets/img/posts/rl-value-func-01.webp)
+![Fig 1: State A leads to state B or C](https://jinglescode.github.io/assets/img/posts/rl-value-func-01.jpg)
 
 In figure 1, how do we determine the value of state A? There is a 50–50 chance to end up in the next 2 possible states, either state B or C. The value of state A is simply the sum of all next states’ probability multiplied by the reward for reaching that state. The value of state A is 0.5.
 
-![Fig 2: One-way future states](https://jinglescode.github.io/assets/img/posts/rl-value-func-02.webp)
+![Fig 2: One-way future states](https://jinglescode.github.io/assets/img/posts/rl-value-func-02.jpg)
 
 In figure 2, you find yourself in state D with only 1 possible route to state E. Since state E gives a reward of 1, state D’s value is also 1 since the only outcome is to receive the reward.
 
 If you are in state F (in figure 2), which can only lead to state G, followed by state H. Since state H has a negative reward of -1, state G’s value will also be -1, likewise for state F.
 
-![Fig 3: Being in state J brings you closer to state K](https://jinglescode.github.io/assets/img/posts/rl-value-func-03.webp)
+![Fig 3: Being in state J brings you closer to state K](https://jinglescode.github.io/assets/img/posts/rl-value-func-03.jpg)
 
 [In this game of tic-tac-toe,](https://jinglescode.github.io/reinforcement-learning-tic-tac-toe) getting 2 Xs in a row (state J in figure 3) does not win the game, hence there is no reward. But being at state J places you one step closer to reaching state K, completing the row of X to win the game, thus being in state J yields a good value.
 
-![Fig 4: State M has a higher value than state N](https://jinglescode.github.io/assets/img/posts/rl-value-func-04.webp)
+![Fig 4: State M has a higher value than state N](https://jinglescode.github.io/assets/img/posts/rl-value-func-04.jpg)
 
 In figure 4, you’ll find yourself in state L contemplating where to place your next X. You can place it at the top thus bringing you to state M with 2 Xs in the same row. The other choice would be to place it at the bottom row. State M should have a higher significance and value as compared to state N because it results in a higher possibility of victory.
 
@@ -52,7 +52,7 @@ The Value function V(s) for a tic-tac-toe game is the probability of winning for
 
 Updating the value function is how the agent learns from past experiences, by updating the value of those states that have been through in the training process.
 
-![Fig 5: Update the value of state s](https://jinglescode.github.io/assets/img/posts/rl-value-func-05.webp)
+![Fig 5: Update the value of state s](https://jinglescode.github.io/assets/img/posts/rl-value-func-05.jpg)
 
 State s’ is the next state of the current state s. We can update the value of the current state s by adding the differences in value between state s and s’. α is the learning rate.
 
@@ -66,7 +66,7 @@ The goal of the agent is to update the value function after a game is played to 
 
 # Tic Tac Toe — Exploit the Value Function
 
-![Fig 6: Values of various next states](https://jinglescode.github.io/assets/img/posts/rl-value-func-06.webp)
+![Fig 6: Values of various next states](https://jinglescode.github.io/assets/img/posts/rl-value-func-06.jpg)
 
 Given enough training, the agent would have learnt the value (or probability of winning) of any given state. So, when we play a game against our trained agent, the agent uses the exploit strategy to maximise winning rate. [See if you can win against the agent](https://jinglescode.github.io/reinforcement-learning-tic-tac-toe).
 
